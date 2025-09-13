@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+   <header>
+        <table width="100%">
+            <tr>
+                <td width="80" valign="top">
+                    <img src="files.png" alt="Logo" width="150" height="150">
+                </td>
+                <td>
+                    <h1><font face="Georgia" size="6">Hyper Text Markup Language</font></h1>
+                    <p><font face="Arial">Comprehensive notes on HTML</font></p>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <hr>
+
+    <div>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Media</title>
+</head>
+<body>
+    <!-- Content Section -->
+    <main>
+        <h1><font face="Georgia" size="6">HTML Media</font></h1>
+        
+        <h2><font face="Verdana">First Principle: The Web is More Than Text and Images</font></h2>
+        <p><font face="Arial" size="4">
+            The fundamental truth is that a webpage should be able to deliver any kind of content, not just static text and pictures. For years, this was a major problem. To play a video or audio file, browsers had to rely on third-party plugins like Adobe Flash, QuickTime, or Silverlight. This was inefficient, insecure, and inconsistent across different computers.
+        </font></p>
+      
+        <h3><font face="Verdana">The Core Problem</font></h3>
+        <p><font face="Arial" size="4">
+            How can we embed video and audio into a webpage in a <strong>standardized, native, and plugin-free</strong> way? We need a universal system that works on every modern browser, from a desktop PC to a mobile phone, without requiring the user to install anything extra.
+        </font></p>
+        
+        <h3><font face="Verdana">The Logical Solution: The HTML5 &lt;video&gt; and &lt;audio&gt; Tags</font></h3>
+        <p><font face="Arial" size="4">
+            The solution was to create dedicated HTML tags whose sole purpose is to embed and control media.
+        </font></p>
+        
+        <h2><font face="Verdana">Part 1: The Basics - Getting a Video on the Page</font></h2>
+        <p><font face="Arial" size="4">
+            The star of the show is the &lt;video&gt; tag. At its simplest, it just needs to know the source of the video file.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;!-- This is the most basic implementation --&gt;
+&lt;video src="my-awesome-video.mp4"&gt;&lt;/video&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            <strong>The Problem We Immediately Face:</strong> If you put this on a page, you'll just see the first frame of the video as a static image. You can't play it, pause it, or change the volume. It's not a video player; it's just a video frame.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong> We need to add player controls. The browser has a beautiful set of default controls built-in, and we can turn them on with a simple attribute.
+        </font></p>
+        
+        <h3><font face="Verdana">The controls Attribute: The Magic Switch</font></h3>
+        <p><font face="Arial" size="4">
+            The controls attribute is a <strong>boolean attribute</strong>. You don't need to set it to a value (controls="true" is unnecessary); its mere presence turns the feature on.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;video src="my-awesome-video.mp4" controls&gt;&lt;/video&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            <strong>Result:</strong> You now have a fully functional video player on your page, complete with a play/pause button, a timeline scrubber, volume controls, and a fullscreen option. This is the simplest, most effective way to embed a video.
+        </font></p>
+        
+       
+        
+        <h2><font face="Verdana">Part 2: Intermediate - Gaining More Control with Attributes</font></h2>
+        <p><font face="Arial" size="4">
+            Now that we have a player, how do we control its behavior and appearance? We use attributes.
+        </font></p>
+        
+        <h3><font face="Verdana">width and height</font></h3>
+        <p><font face="Arial" size="4">
+            Just like with an &lt;img&gt; tag, you can set the dimensions of the player.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;video src="video.mp4" width="640" height="360" controls&gt;&lt;/video&gt;
+        </font></pre>
+        
+        <h3><font face="Verdana">autoplay</font></h3>
+        <p><font face="Arial" size="4">
+            This attribute will make the video start playing as soon as the page loads.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>CRITICAL CAVEAT:</strong> Modern browsers (Chrome, Safari, Firefox) will <strong>block autoplay with sound</strong> because it's a terrible user experience. To make autoplay work, you almost always have to add the muted attribute as well.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;!-- This will autoplay, but with no sound --&gt;
+&lt;video src="video.mp4" autoplay muted controls&gt;&lt;/video&gt;
+        </font></pre>
+        
+        <h3><font face="Verdana">loop</font></h3>
+        <p><font face="Arial" size="4">
+            Makes the video automatically restart from the beginning when it finishes. Great for background videos.
+        </font></p>
+        
+        <h3><font face="Verdana">poster</font></h3>
+        <p><font face="Arial" size="4">
+            This is a fantastic feature for user experience. It specifies an image to display before the video is played, just like a YouTube thumbnail.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;video src="video.mp4" poster="images/video-thumbnail.jpg" controls&gt;&lt;/video&gt;
+        </font></pre>
+        
+     
+        <h2><font face="Verdana">Part 3: The &lt;audio&gt; Tag</font></h2>
+        <p><font face="Arial" size="4">
+            The good news is that the &lt;audio&gt; tag works almost identically to the &lt;video&gt; tag, just without the visual component.
+        </font></p>
+        
+        <h3><font face="Verdana">The Problem:</font></h3>
+        <p><font face="Arial" size="4">
+            How do we embed a sound file (like a song or a podcast) with player controls?
+        </font></p>
+        
+        <h3><font face="Verdana">The Solution:</font></h3>
+        <p><font face="Arial" size="4">
+            Use the &lt;audio&gt; tag with the controls attribute.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;p&gt;Listen to our theme song:&lt;/p&gt;
+&lt;audio src="audio/theme-song.mp3" controls&gt;&lt;/audio&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            <strong>Result:</strong> A clean audio player with play/pause, a timeline, and volume controls. It uses the same attributes like autoplay, loop, and muted.
+        </font></p>
+        
+        
+        <h2><font face="Verdana">Part 4: Advanced & Professional - Solving Real-World Problems</font></h2>
+        <p><font face="Arial" size="4">
+            This is where we move from just making a player work to making it work for <em>everyone</em>, on <em>every browser</em>.
+        </font></p>
+        
+        <h3><font face="Verdana">Problem #1: Not all browsers support the same video formats.</font></h3>
+        <p><font face="Arial" size="4">
+            Chrome might prefer the modern .webm format, while Safari on an iPhone might only support .mp4. If you only provide one src, some of your users won't be able to see your video.
+        </font></p>
+        
+        <h3><font face="Verdana">The Solution: The &lt;source&gt; Element</font></h3>
+        <p><font face="Arial" size="4">
+            Instead of putting the src on the &lt;video&gt; tag itself, you can provide multiple formats <em>inside</em> the tag using the &lt;source&gt; element. The browser will go down the list and play the <strong>first one it supports</strong>.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;video controls poster="images/thumbnail.jpg"&gt;
+  &lt;source src="videos/my-video.webm" type="video/webm"&gt;
+  &lt;source src="videos/my-video.mp4" type="video/mp4"&gt;
+  Sorry, your browser doesn't support embedded videos.
+&lt;/video&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            This is the robust, professional way to embed media. The type attribute tells the browser what kind of file it is so it doesn't have to waste time downloading a file it can't play.
+        </font></p>
+        
+        <h3><font face="Verdana">Problem #2: Your video is not accessible.</font></h3>
+        <p><font face="Arial" size="4">
+            Users who are deaf or hard of hearing can't understand your video. Users in a noisy environment (or a quiet office) can't listen to the audio. Users speaking another language won't understand it.
+        </font></p>
+        
+        <h3><font face="Verdana">The Solution: The &lt;track&gt; Element</font></h3>
+        <p><font face="Arial" size="4">
+            The &lt;track&gt; element allows you to add timed text tracks, such as subtitles or captions. It's a self-closing tag that points to a special text file, usually in <strong>WebVTT (.vtt) format</strong>.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;video controls&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+
+  &lt;!-- English Captions for the hearing impaired --&gt;
+  &lt;track src="captions_en.vtt" kind="captions" srclang="en" label="English"&gt;
+
+  &lt;!-- Spanish Subtitles for translation --&gt;
+  &lt;track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Español"&gt;
+&lt;/video&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            <strong>Breakdown:</strong>
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4"><strong>src:</strong> Path to the .vtt file.</font></li>
+            <li><font face="Arial" size="4"><strong>kind:</strong> The type of track. The most common are:
+                <ul>
+                    <li><strong>captions:</strong> A direct transcription of the dialogue and important sounds, for users who can't hear the audio.</li>
+                    <li><strong>subtitles:</strong> A translation of the dialogue into another language.</li>
+                    <li><strong>descriptions:</strong> A separate audio description for visually impaired users.</li>
+                </ul>
+            </font></li>
+            <li><font face="Arial" size="4"><strong>srclang:</strong> The language of the track file (e.g., "en" for English).</font></li>
+            <li><font face="Arial" size="4"><strong>label:</strong> The name that appears in the video player's captions menu.</font></li>
+        </ul>
+        
+        <p><font face="Arial" size="4">
+            This makes your video accessible to a much wider audience and is a critical part of professional web development.
+        </font></p>
+      
+        
+        <h2><font face="Verdana">The Robust & Professional Method (&lt;source&gt;)</font></h2>
+        
+        <pre><font face="Courier New" size="4">
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;source src="movie.ogg" type="video/ogg"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            This method's primary purpose is <strong>to ensure maximum browser compatibility.</strong>
+        </font></p>
+        
+        <h3><font face="Verdana">The First Principle:</font></h3>
+        <p><font face="Arial" size="4">
+            Not all web browsers support the same video file formats.
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4"><strong>.mp4 (H.264 codec):</strong> This is the most widely supported format today. Almost all modern browsers can play it.</font></li>
+            <li><font face="Arial" size="4"><strong>.webm (VP8/VP9 codec):</strong> This is an open-source format heavily promoted by Google. It has excellent support in Chrome and Firefox.</font></li>
+            <li><font face="Arial" size="4"><strong>.ogg (Theora codec):</strong> This was an older open-source alternative, more popular before .webm took over.</font></li>
+        </ul>
+        
+        <h3><font face="Verdana">How It Works (The Logic):</font></h3>
+        <p><font face="Arial" size="4">
+            This code gives the browser a <strong>list of options</strong>. The browser will read this list from top to bottom and play the <strong>very first video format it understands</strong>.
+        </font></p>
+        <ol>
+            <li><font face="Arial" size="4">The browser first sees &lt;source src="movie.mp4" ...&gt;. It asks itself, "Can I play MP4 video?"
+                <ul>
+                    <li>If the answer is <strong>YES</strong>, it loads movie.mp4, plays it, and <strong>completely ignores the rest of the &lt;source&gt; tags</strong>.</li>
+                    <li>If the answer is <strong>NO</strong>, it moves to the next option.</li>
+                </ul>
+            </font></li>
+            <li><font face="Arial" size="4">The browser then sees &lt;source src="movie.ogg" ...&gt;. It asks, "Okay, can I play Ogg video?"
+                <ul>
+                    <li>If the answer is <strong>YES</strong>, it loads movie.ogg and plays it.</li>
+                    <li>If the answer is <strong>NO</strong>, it has no other options.</li>
+                </ul>
+            </font></li>
+        </ol>
+        
+        <h3><font face="Verdana">The Fallback Text:</font></h3>
+        <p><font face="Arial" size="4">
+            The text "Your browser does not support the video tag." is the final fallback. It will <strong>only</strong> be displayed if the user is on an extremely old browser (like Internet Explorer 8) that doesn't even recognize what the &lt;video&gt; tag is.
+        </font></p>
+        
+        <h3><font face="Verdana">In Summary (Example 1):</font></h3>
+        <ul>
+            <li><font face="Arial" size="4"><strong>Pros:</strong> The most reliable and professional way to embed video. It provides multiple formats to ensure your video will play for the largest possible audience across different browsers and devices.</font></li>
+            <li><font face="Arial" size="4"><strong>Cons:</strong> Requires you to have your video file encoded in multiple formats, which takes extra work.</font></li>
+        </ul>
+        
+        <h2><font face="Verdana">The Simple & Direct Method (src attribute)</font></h2>
+        
+        <pre><font face="Courier New" size="4">
+&lt;video src="a.mp4" controls&gt;&lt;/video&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            This method's primary purpose is <strong>simplicity and directness.</strong>
+        </font></p>
+        
+        <h3><font face="Verdana">How It Works (The Logic):</font></h3>
+        <p><font face="Arial" size="4">
+            This code gives the browser a <strong>single, direct command</strong>: "Play the file a.mp4." There are no other options.
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4">The browser sees the src attribute and asks itself, "Can I play MP4 video?"
+                <ul>
+                    <li>If the answer is <strong>YES</strong>, it loads a.mp4 and plays it.</li>
+                    <li>If the answer is <strong>NO</strong>, the video simply will not play. The user will likely see an error message or a black box.</li>
+                </ul>
+            </font></li>
+        </ul>
+        
+        <h3><font face="Verdana">In Summary (Example 2):</font></h3>
+        <ul>
+            <li><font face="Arial" size="4"><strong>Pros:</strong> Very simple to write and easy to read. You only need one video file.</font></li>
+            <li><font face="Arial" size="4"><strong>Cons:</strong> It's an "all or nothing" approach. If the user's browser doesn't support the .mp4 format for some reason, the video fails completely. There is no fallback option.</font></li>
+        </ul>
+        
+        <h2><font face="Verdana">Comparison Table</font></h2>
+        <table border="1" cellpadding="8" cellspacing="0" width="100%">
+            <tr>
+                <th><font face="Verdana">Feature</font></th>
+                <th><font face="Verdana">Example 1 (&lt;source&gt; Method)</font></th>
+                <th><font face="Verdana">Example 2 (src Method)</font></th>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4"><strong>Browser Compatibility</strong></font></td>
+                <td><font face="Arial" size="4"><strong>Excellent.</strong> Provides multiple formats as fallbacks.</font></td>
+                <td><font face="Arial" size="4"><strong>Good, but not guaranteed.</strong> Relies on a single format.</font></td>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4"><strong>Flexibility</strong></font></td>
+                <td><font face="Arial" size="4">High. You can list many different formats.</font></td>
+                <td><font face="Arial" size="4">Low. Only one format is possible.</font></td>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4"><strong>Simplicity</strong></font></td>
+                <td><font face="Arial" size="4">More complex. Requires multiple lines and files.</font></td>
+                <td><font face="Arial" size="4">Very simple. Requires only one line.</font></td>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4"><strong>Fallback for Old Browsers</strong></font></td>
+                <td><font face="Arial" size="4">Excellent. Provides custom text if the &lt;video&gt; tag fails.</font></td>
+                <td><font face="Arial" size="4">None.</font></td>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4"><strong>Best Use Case</strong></font></td>
+                <td><font face="Arial" size="4"><strong>Public-facing websites</strong> where you need to support all users.</font></td>
+                <td><font face="Arial" size="4"><strong>Quick tests, internal projects,</strong> or when you are 100% certain your target audience supports your one format.</font></td>
+            </tr>
+        </table>
+        
+        <h3><font face="Verdana">Conclusion: Which One Should You Use?</font></h3>
+        <p><font face="Arial" size="4">
+            For any serious, public website, <strong>you should always prefer the first method using the &lt;source&gt; element</strong>. It is the industry best practice.
+        </font></p>
+        <p><font face="Arial" size="4">
+            However, since .mp4 has become so universally supported in the last few years, many developers now take the shortcut and use the second, simpler method for convenience, especially for internal or less critical projects. But they are accepting the small risk that it might not work for every single user.
+        </font></p>
+        
+        <h2><font face="Verdana">HTML Entities</font></h2>
+        <p><font face="Arial" size="4">
+            HTML entities are special codes used to display characters that have special meaning in HTML or that aren't easily typed on a keyboard.
+        </font></p>
+        
+        <h3><font face="Verdana">The Two Ways to Create the Copyright Symbol ©</font></h3>
+        <p><font face="Arial" size="4">
+            You can use either the <strong>entity name</strong> or the <strong>entity number</strong>. Both produce the exact same result. The entity name is generally easier to remember.
+        </font></p>
+        
+        <h4><font face="Verdana">1. Using the Entity Name (Recommended)</font></h4>
+        <p><font face="Arial" size="4">
+            This is the most common and readable method.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>Code:</strong> &amp;copy;
+        </font></p>
+        <p><font face="Arial" size="4">
+            Example Usage in a Footer:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;footer&gt;
+    &lt;p&gt;Copyright &amp;copy; 2024 My Awesome Website. All Rights Reserved.&lt;/p&gt;
+&lt;/footer&gt;
+        </font></pre>
+        
+        <h4><font face="Verdana">2. Using the Entity Number</font></h4>
+        <p><font face="Arial" size="4">
+            This method uses the character's numerical code. It works just as well but is less descriptive.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>Code:</strong> &amp;#169;
+        </font></p>
+        <p><font face="Arial" size="4">
+            Example Usage:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;footer&gt;
+    &lt;p&gt;Copyright &amp;#169; 2024 My Awesome Website. All Rights Reserved.&lt;/p&gt;
+&lt;/footer&gt;
+        </font></pre>
+        
+        <h3><font face="Verdana">Other Common Symbol Entities You Should Know</font></h3>
+        <p><font face="Arial" size="4">
+            The same principle applies to other common symbols.
+        </font></p>
+        
+        <table border="1" cellpadding="8" cellspacing="0" width="100%">
+            <tr>
+                <th><font face="Verdana">Symbol</font></th>
+                <th><font face="Verdana">Description</font></th>
+                <th><font face="Verdana">Entity Name</font></th>
+                <th><font face="Verdana">Entity Number</font></th>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4">©</font></td>
+                <td><font face="Arial" size="4">Copyright</font></td>
+                <td><font face="Arial" size="4">&amp;copy;</font></td>
+                <td><font face="Arial" size="4">&amp;#169;</font></td>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4">®</font></td>
+                <td><font face="Arial" size="4">Registered Trademark</font></td>
+                <td><font face="Arial" size="4">&amp;reg;</font></td>
+                <td><font face="Arial" size="4">&amp;#174;</font></td>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4">™</font></td>
+                <td><font face="Arial" size="4">Trademark</font></td>
+                <td><font face="Arial" size="4">&amp;trade;</font></td>
+                <td><font face="Arial" size="4">&amp;#8482;</font></td>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4">&lt;</font></td>
+                <td><font face="Arial" size="4">Less-than (for showing code)</font></td>
+                <td><font face="Arial" size="4">&amp;lt;</font></td>
+                <td><font face="Arial" size="4">&amp;#60;</font></td>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4">&gt;</font></td>
+                <td><font face="Arial" size="4">Greater-than (for showing code)</font></td>
+                <td><font face="Arial" size="4">&amp;gt;</font></td>
+                <td><font face="Arial" size="4">&amp;#62;</font></td>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4">&amp;</font></td>
+                <td><font face="Arial" size="4">Ampersand</font></td>
+                <td><font face="Arial" size="4">&amp;amp;</font></td>
+                <td><font face="Arial" size="4">&amp;#38;</font></td>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4">"</font></td>
+                <td><font face="Arial" size="4">Double Quote</font></td>
+                <td><font face="Arial" size="4">&amp;quot;</font></td>
+                <td><font face="Arial" size="4">&amp;#34;</font></td>
+            </tr>
+            <tr>
+                <td><font face="Arial" size="4">€</font></td>
+                <td><font face="Arial" size="4">Euro Sign</font></td>
+                <td><font face="Arial" size="4">&amp;euro;</font></td>
+                <td><font face="Arial" size="4">&amp;#8364;</font></td>
+            </tr>
+        </table>
+        
+        <h4><font face="Verdana">Why do we need entities for &lt; and &gt;?</font></h4>
+        <p><font face="Arial" size="4">
+            Because the browser would interpret &lt; and &gt; as the start or end of an HTML tag. If you want to literally display the text &lt;p&gt; on your page, you must write &amp;lt;p&amp;gt;.
+        </font></p>
+        
+       
+    </main>
+    </div>
+
+
+
+
+
+<hr>
+
+
+
+
+   <footer>
+        <table width="100%">
+            <tr>
+                <td align="center">
+                    <p><font face="Arial" size="2">HTML Notes &copy; 2025</font></p>
+                    <p><font face="Arial" size="2">All rights reserved | Created By Anusha Sajjan</font></p>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

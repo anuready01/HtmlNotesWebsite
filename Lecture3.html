@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+   <header>
+        <table width="100%">
+            <tr>
+                <td width="80" valign="top">
+                    <img src="files.png" alt="Logo" width="150" height="150">
+                </td>
+                <td>
+                    <h1><font face="Georgia" size="6">Hyper Text Markup Language</font></h1>
+                    <p><font face="Arial">Comprehensive notes on HTML</font></p>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <hr>
+
+
+
+
+<div>
+   <main>
+        <h1><font face="Georgia" size="6">HTML Lists and Tables</font></h1>
+        
+        <p><font face="Arial" size="4">
+            Lists in HTML organize information into a structured, readable format, while tables arrange data in a grid of rows and columns. Using the right structure semantically improves accessibility for screen readers and makes your content easier for search engines to understand.
+        </font></p>
+        
+        <center>
+            <img src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_04_HTML-Lists-1.jpg" alt="HTML Lists" width="500" height="300">
+        </center>
+        
+        <h2><font face="Verdana">HTML Lists</font></h2>
+        
+        <h3><font face="Verdana">1. Unordered lists &lt;ul&gt;</font></h3>
+        <p><font face="Arial" size="4">
+            Unordered lists display a list of items where the order does not matter. 
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4">Starts with the &lt;ul&gt; tag.</font></li>
+            <li><font face="Arial" size="4">Each list item begins with the &lt;li&gt; tag.</font></li>
+            <li><font face="Arial" size="4">The default marker is a filled-in circle (a disc), but you can change it to a hollow circle (circle), a square (square), or to none with CSS.</font></li>
+        </ul>
+        
+        <p><font face="Arial" size="4">Example:</font></p>
+        <pre><font face="Courier New" size="4">
+&lt;ul&gt;
+  &lt;li&gt;Apples&lt;/li&gt;
+  &lt;li&gt;Bananas&lt;/li&gt;
+  &lt;li&gt;Oranges&lt;/li&gt;
+&lt;/ul&gt;
+        </font></pre>
+        
+        <h3><font face="Verdana">2. Ordered lists &lt;ol&gt;</font></h3>
+        <p><font face="Arial" size="4">
+            Ordered lists are used for items where the sequence is important. 
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4">Starts with the &lt;ol&gt; tag.</font></li>
+            <li><font face="Arial" size="4">Each list item begins with the &lt;li&gt; tag.</font></li>
+            <li><font face="Arial" size="4">By default, items are marked with numbers, but you can use the type attribute to change it to uppercase letters (A), lowercase letters (a), uppercase Roman numerals (I), or lowercase Roman numerals (i).</font></li>
+            <li><font face="Arial" size="4">The start attribute can be used to begin the list from a specific number.</font></li>
+        </ul>
+        
+        <p><font face="Arial" size="4">Example with attributes:</font></p>
+        <pre><font face="Courier New" size="4">
+&lt;ol type="a" start="3"&gt;
+  &lt;li&gt;Start the engine&lt;/li&gt;
+  &lt;li&gt;Check the mirrors&lt;/li&gt;
+  &lt;li&gt;Drive away&lt;/li&gt;
+&lt;/ol&gt;
+        </font></pre>
+        
+        <h3><font face="Verdana">3. Description lists &lt;dl&gt;</font></h3>
+        <p><font face="Arial" size="4">
+            Also known as definition lists, these are useful for defining terms. 
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4">The entire list is contained within the &lt;dl&gt; tag.</font></li>
+            <li><font face="Arial" size="4">The term being defined is specified with the &lt;dt&gt; tag.</font></li>
+            <li><font face="Arial" size="4">The description or definition for the term is specified with the &lt;dd&gt; tag.</font></li>
+        </ul>
+        
+        <p><font face="Arial" size="4">Example:</font></p>
+        <pre><font face="Courier New" size="4">
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;
+        </font></pre>
+        
+        <h3><font face="Verdana">4. Nested lists</font></h3>
+        <p><font face="Arial" size="4">
+            You can place one list inside another to create a hierarchy.
+        </font></p>
+        
+        <p><font face="Arial" size="4">Example:</font></p>
+        <pre><font face="Courier New" size="4">
+&lt;ul&gt;
+  &lt;li&gt;Main Item One&lt;/li&gt;
+  &lt;li&gt;Main Item Two
+    &lt;ol&gt;
+      &lt;li&gt;Sub-item 2.1&lt;/li&gt;
+      &lt;li&gt;Sub-item 2.2&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Main Item Three&lt;/li&gt;
+&lt;/ul&gt;
+        </font></pre>
+        <hr>
+        <center>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240403124329/HTML-Tables.webp" alt="HTML Tables" width="500" height="300">
+        </center>
+        
+        <h2><font face="Verdana">HTML Tables</font></h2>
+        
+        
+        <h3><font face="Verdana">Basic table structure</font></h3>
+        <p><font face="Arial" size="4">
+            HTML tables are created with the &lt;table&gt; tag and structured with rows and data cells. 
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4">&lt;table&gt;: The container for the entire table.</font></li>
+            <li><font face="Arial" size="4">&lt;tr&gt;: Defines a single table row.</font></li>
+            <li><font face="Arial" size="4">&lt;th&gt;: Defines a table header cell. Text is typically bold and centered by default.</font></li>
+            <li><font face="Arial" size="4">&lt;td&gt;: Defines a standard table data cell.</font></li>
+            <li><font face="Arial" size="4">&lt;caption&gt;: Provides a title or description for the table.</font></li>
+        </ul>
+        
+        <p><font face="Arial" size="4">Example:</font></p>
+        <pre><font face="Courier New" size="4">
+&lt;table&gt;
+  &lt;caption&gt;Monthly Sales Report&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Sales&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$5000&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </font></pre>
+        
+        <h3><font face="Verdana">Advanced table structure and features</font></h3>
+        <p><font face="Arial" size="4">
+            For more complex or accessible tables, you can use additional tags to define different parts of the table. 
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4">&lt;thead&gt;: Groups the header content in a table.</font></li>
+            <li><font face="Arial" size="4">&lt;tbody&gt;: Groups the main body content of the table.</font></li>
+            <li><font face="Arial" size="4">&lt;tfoot&gt;: Groups the footer content, such as a summary row.</font></li>
+            <li><font face="Arial" size="4">&lt;colgroup&gt; and &lt;col&gt;: Specify properties for a group of columns.</font></li>
+        </ul>
+        
+        <h3><font face="Verdana">Cell spanning attributes</font></h3>
+        <p><font face="Arial" size="4">
+            These attributes allow a single cell to occupy the space of multiple rows or columns. 
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4"><strong>colspan:</strong> An attribute used on a &lt;td&gt; or &lt;th&gt; tag to specify how many columns a cell should span.</font></li>
+            <li><font face="Arial" size="4"><strong>rowspan:</strong> An attribute used on a &lt;td&gt; or &lt;th&gt; tag to specify how many rows a cell should span.</font></li>
+        </ul>
+        
+        <p><font face="Arial" size="4">Example with spanning cells:</font></p>
+        <pre><font face="Courier New" size="4">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th colspan="2"&gt;Contact Information&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jane Doe&lt;/td&gt;
+    &lt;td&gt;555-1234&lt;/td&gt;
+    &lt;td&gt;jane.doe@email.com&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </font></pre>
+        
+        <h3><font face="Verdana">Styling tables with CSS</font></h3>
+        <p><font face="Arial" size="4">
+            For modern web development, styling should be handled with CSS rather than using deprecated HTML attributes like bgcolor. 
+        </font></p>
+        <p><font face="Arial" size="4">Common CSS properties for tables:</font></p>
+        <ul>
+            <li><font face="Arial" size="4"><strong>border:</strong> Add borders to the table and cells.</font></li>
+            <li><font face="Arial" size="4"><strong>border-collapse:</strong> Collapse the cell borders into a single border.</font></li>
+            <li><font face="Arial" size="4"><strong>padding:</strong> Control the space between the cell content and its border.</font></li>
+            <li><font face="Arial" size="4"><strong>text-align:</strong> Align the content inside a cell.</font></li>
+            <li><font face="Arial" size="4"><strong>background-color:</strong> Set a background color for the table, a row, or a specific cell.</font></li>
+        </ul>
+        
+        
+    </main>
+</div>
+
+
+
+
+
+<hr>
+
+   <footer>
+        <table width="100%">
+            <tr>
+                <td align="center">
+                    <p><font face="Arial" size="2">HTML Notes &copy; 2025</font></p>
+                    <p><font face="Arial" size="2">All rights reserved | Created By Anusha Sajjan</font></p>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

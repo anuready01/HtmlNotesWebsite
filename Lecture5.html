@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - File Paths, Boilerplate, and Multi-page Websites</title>
+</head>
+<body>
+    <header>
+        <table width="100%">
+            <tr>
+                <td width="80" valign="top">
+                    <img src="files.png" alt="Logo" width="150" height="150">
+                </td>
+                <td>
+                    <h1><font face="Georgia" size="6">Hyper Text Markup Language</font></h1>
+                    <p><font face="Arial">Comprehensive notes on HTML</font></p>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <hr>
+
+<div>
+     <main>
+        <h1><font face="Georgia" size="6">Forms in HTML</font></h1>
+        
+        <h2><font face="Verdana">The First Principle: The Web Needs to Be a Two-Way Street</font></h2>
+        <p><font face="Arial" size="4">
+            The fundamental truth is that a website isn't just a brochure for you to read. For the web to be useful, it needs a way to <strong>collect information <em>from</em> the user</strong> and send it back to the server.
+        </font></p>
+        <p><font face="Arial" size="4">
+            Without this, you couldn't log in, search for a video, buy a product, post a comment, or send a message. The web would be a read-only library.
+        </font></p>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" alt="Two-way Communication" width="150" height="150">
+        </center>
+        
+        <h3><font face="Verdana">The Core Problem</font></h3>
+        <p><font face="Arial" size="4">
+            How do we create a standardized, reliable system to:
+        </font></p>
+        <ol>
+            <li><font face="Arial" size="4"><strong>Display</strong> interactive fields for a user to fill in (text boxes, checkboxes, dropdowns).</font></li>
+            <li><font face="Arial" size="4"><strong>Package</strong> the user's data neatly.</font></li>
+            <li><font face="Arial" size="4"><strong>Send</strong> that package to a specific destination on a server.</font></li>
+            <li><font face="Arial" size="4"><strong>Tell</strong> the server <em>how</em> the data is being sent.</font></li>
+        </ol>
+        
+        <p><font face="Arial" size="4">
+            The logical solution to this entire problem is the HTML <strong>&lt;form&gt;</strong>.
+        </font></p>
+        
+        <h2><font face="Verdana">The &lt;input&gt; Element: The Box for Your Stuff</font></h2>
+        <p><font face="Arial" size="4">
+            This is the most common form tag. It's a self-closing tag that creates an input field. Its behavior changes based on its <strong>type</strong> attribute.
+        </font></p>
+        <p><font face="Arial" size="4">
+            The most basic type is <strong>text</strong>.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;input type="text"&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            Let's put it in a form:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;form&gt;
+    &lt;input type="text"&gt;
+&lt;/form&gt;
+        </font></pre>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/709/709510.png" alt="Input Element" height="100">
+        </center>
+        
+        <h2><font face="Verdana">The Need for Meaning - The &lt;label&gt;</font></h2>
+        <p><font face="Arial" size="4">
+            <strong>The Problem:</strong> We have a box, but the user has no idea what they are supposed to type into it. Is it for a name? An email? A search query? The box is meaningless without a description.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong> We need to add a descriptive piece of text. The correct HTML tag for this is the <strong>&lt;label&gt;</strong>. It's a tag specifically designed to be the title for a form field.
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            Let's add a label:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;label&gt;First Name:&lt;/label&gt;
+&lt;input type="text"&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            <strong>Result:</strong> This is better! Now the user sees "First Name:" next to the box and knows what to type. But the &lt;label&gt; and the &lt;input&gt; are still two completely separate, unrelated things. The browser doesn't know they belong together.
+        </font></p>
+        
+        <h3><font face="Verdana">The Need for Connection - id and for</font></h3>
+        <p><font face="Arial" size="4">
+            <strong>The Problem:</strong> How can we create a direct, unbreakable link between the label "First Name:" and its specific input box? We need this for two reasons:
+        </font></p>
+        <ol>
+            <li><font face="Arial" size="4"><strong>Usability:</strong> It would be great if a user could click on the <em>text</em> of the label to activate the input box.</font></li>
+            <li><font face="Arial" size="4"><strong>Accessibility:</strong> Screen readers for visually impaired users need to know which label describes which input so they can announce it correctly.</font></li>
+        </ol>
+        
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong> We need a unique naming system.
+        </font></p>
+        <ol>
+            <li><font face="Arial" size="4">First, we give our input box a unique name that no other element on the page has. The attribute for a unique name is <strong>id</strong>. Let's give it an id of "firstName".</font></li>
+            <li><font face="Arial" size="4">Next, we tell the label which element it is <strong>for</strong>. The for attribute on the label must match the id of the input.</font></li>
+        </ol>
+        
+        <p><font face="Arial" size="4">
+            Let's connect them:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;label for="firstName"&gt;First Name:&lt;/label&gt;
+&lt;input type="text" id="firstName"&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            <strong>Result:</strong> We have now created a powerful, explicit connection.
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4"><strong>Try it:</strong> If you click on the text "First Name:", your cursor will magically jump into the text box.</font></li>
+            <li><font face="Arial" size="4"><strong>Behind the scenes:</strong> A screen reader will now announce, "First Name, edit text" when the user focuses on the input box. The two elements are now a true pair.</font></li>
+        </ul>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/921/921490.png" alt="Label and Input" height="100">
+        </center>
+        
+        <h2><font face="Verdana">The Need for Submission - The &lt;form&gt; and submit</font></h2>
+        <p><font face="Arial" size="4">
+            <strong>The Problem:</strong> We have a field for the user to fill out, but we have no way for them to actually <em>submit</em> this information. We need a container for our fields and a "Go" button.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong>
+        </font></p>
+        <ol>
+            <li><font face="Arial" size="4">We wrap all our form fields in a &lt;form&gt; tag. This tag acts as the main container that tells the browser, "Everything inside here is part of one single submission."</font></li>
+            <li><font face="Arial" size="4">We add a button that tells the form to submit. The simplest way is &lt;input type="submit"&gt;.</font></li>
+        </ol>
+        
+        <p><font face="Arial" size="4">
+            Let's build the form structure:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;form&gt;
+    &lt;label for="firstName"&gt;First Name:&lt;/label&gt;
+    &lt;input type="text" id="firstName"&gt;
+
+    &lt;br&gt;&lt;br&gt; &lt;!-- We'll use simple line breaks for spacing for now --&gt;
+
+    &lt;label for="lastName"&gt;Last Name:&lt;/label&gt;
+    &lt;input type="text" id="lastName"&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;input type="submit"&gt;
+&lt;/form&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            <strong>Result:</strong> We now have a complete visual form with two fields and a submit button. When you click the button, the page reloads, but the data doesn't go anywhere yet.
+        </font></p>
+        
+        <h3><font face="Verdana">The Need for Data Identification - The name Attribute</font></h3>
+        <p><font face="Arial" size="4">
+            <strong>The Problem:</strong> When the form is submitted, the browser needs to package the data to send to a server. How does it label the data? If a user types "Arjun" in the first box, how does the server know that "Arjun" is the firstName? The id attribute is only for use <em>within</em> the page; it is not sent to the server.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong> We need another attribute whose sole purpose is to be the <strong>"data label"</strong> or the <strong>"key"</strong> for the submitted value. This is the <strong>name</strong> attribute.
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            Let's add names to our inputs:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;form&gt;
+    &lt;label for="firstName"&gt;First Name:&lt;/label&gt;
+    &lt;input type="text" id="firstName" name="firstName"&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label for="lastName"&gt;Last Name:&lt;/label&gt;
+    &lt;input type="text" id="lastName" name="lastName"&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;input type="submit"&gt;
+&lt;/form&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            <strong>Result:</strong> Now we have a truly functional form, ready to send meaningful data. When submitted, the browser will create a package that looks like this:
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4">firstName = (whatever the user typed)</font></li>
+            <li><font face="Arial" size="4">lastName = (whatever the user typed)</font></li>
+        </ul>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/921/921490.png" alt="Form Submission" height="100">
+        </center>
+        
+        <h2><font face="Verdana">The Need for "Select One" - Radio Buttons</font></h2>
+        <p><font face="Arial" size="4">
+            <strong>The Problem:</strong> What if you want to ask a question where the user can only choose <strong>one option</strong> from a predefined list? For example, "What is your gender?" or "What is your T-shirt size (Small, Medium, Large)?" A text box is a bad solution—users could type anything ("Med", "M", "medium"), making the data inconsistent.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong> We need an input type where selecting one option automatically de-selects all others. This is the <strong>radio button</strong>: &lt;input type="radio"&gt;.
+        </font></p>
+        <p><font face="Arial" size="4">
+            This introduces a new rule. How does the browser know which radio buttons belong to the same question?
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Rule:</strong> All radio buttons in a single group <strong>must share the same name attribute</strong>. The name acts as the group identifier.
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            Let's build a T-shirt size selector:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;!-- We'll add this inside our existing &lt;form&gt; --&gt;
+
+&lt;label&gt;T-Shirt Size:&lt;/label&gt;
+&lt;br&gt;
+
+&lt;!-- All three are part of the "shirtSize" group --&gt;
+&lt;input type="radio" id="sizeS" name="shirtSize" value="small"&gt;
+&lt;label for="sizeS"&gt;Small&lt;/label&gt;
+&lt;br&gt;
+
+&lt;input type="radio" id="sizeM" name="shirtSize" value="medium"&gt;
+&lt;label for="sizeM"&gt;Medium&lt;/label&gt;
+&lt;br&gt;
+
+&lt;input type="radio" id="sizeL" name="shirtSize" value="large"&gt;
+&lt;label for="sizeL"&gt;Large&lt;/label&gt;
+&lt;br&gt;&lt;br&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            Let's break down the new attributes:
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4"><strong>type="radio":</strong> Creates the circular radio button.</font></li>
+            <li><font face="Arial" size="4"><strong>name="shirtSize":</strong> This is the <strong>critical</strong> part. Because all three have the same name, the browser knows they are a single group and will only let you select one.</font></li>
+            <li><font face="Arial" size="4"><strong>id="sizeS":</strong> Each input still needs a unique id so its specific label can connect to it.</font></li>
+            <li><font face="Arial" size="4"><strong>value="small":</strong> This is the actual data that will be sent to the server if this option is selected. If the user clicks "Small", the form will send shirtSize=small. Without the value, the data would be meaningless.</font></li>
+        </ul>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/709/709510.png" alt="Radio Buttons" height="100">
+        </center>
+        
+        <h2><font face="Verdana">The Need for "Select Many" - Checkboxes</font></h2>
+        <p><font face="Arial" size="4">
+            <strong>The Problem:</strong> Now, what if you want to ask a question where the user can choose <strong>multiple options</strong>? For example, "Which toppings would you like on your pizza?" A radio button won't work, because you can only select one.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong> We need an input type that allows for multiple selections. This is the <strong>checkbox</strong>: &lt;input type="checkbox"&gt;.
+        </font></p>
+        <p><font face="Arial" size="4">
+            Checkboxes that are part of the same question should also share the same name. This tells the server that all the selected values belong to the same category ("toppings").
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            Let's build a toppings selector:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;label&gt;Pizza Toppings:&lt;/label&gt;
+&lt;br&gt;
+
+&lt;input type="checkbox" id="toppingPep" name="toppings" value="pepperoni"&gt;
+&lt;label for="toppingPep"&gt;Pepperoni&lt;/label&gt;
+&lt;br&gt;
+
+&lt;input type="checkbox" id="toppingMush" name="toppings" value="mushrooms"&gt;
+&lt;label for="toppingMush"&gt;Mushrooms&lt;/label&gt;
+&lt;br&gt;
+
+&lt;input type="checkbox" id="toppingOni" name="toppings" value="onions"&gt;
+&lt;label for="toppingOni"&gt;Onions&lt;/label&gt;
+&lt;br&gt;&lt;br&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            <strong>Breakdown:</strong>
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4"><strong>type="checkbox":</strong> Creates the square checkbox.</font></li>
+            <li><font face="Arial" size="4"><strong>name="toppings":</strong> All three share this name, telling the server they are all "toppings".</font></li>
+            <li><font face="Arial" size="4"><strong>id="toppingPep":</strong> Each has a unique id for its label.</font></li>
+            <li><font face="Arial" size="4"><strong>value="pepperoni":</strong> Each has a unique value to identify which topping was chosen.</font></li>
+        </ul>
+        
+        <p><font face="Arial" size="4">
+            <strong>Result:</strong> You now have three checkboxes, and you can click and select as many as you want.
+        </font></p>
+        
+      
+        
+        <h2><font face="Verdana">A Better Button - The &lt;button&gt; Element</font></h2>
+        <p><font face="Arial" size="4">
+            <strong>The Problem:</strong> Our &lt;input type="submit"&gt; works, but it's very limited. You can only put plain text in it using the value attribute. What if you want a button with an image, or with bold text?
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong> Use the &lt;button&gt; element. It's a container tag, meaning it has an opening and closing tag. This allows you to put other HTML elements <em>inside</em> it.
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            Let's replace our old submit button:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;!-- OLD WAY --&gt;
+&lt;input type="submit" value="Submit Your Order"&gt;
+
+&lt;!-- NEW, BETTER WAY --&gt;
+&lt;button type="submit"&gt;
+    &lt;strong&gt;Submit&lt;/strong&gt; Your Order
+&lt;/button&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            <strong>Breakdown:</strong>
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4"><strong>&lt;button&gt;:</strong> The container for the button.</font></li>
+            <li><font face="Arial" size="4"><strong>type="submit":</strong> This is very important. This attribute tells the button to act as a form submit button. (It can also be type="button" for JavaScript or type="reset").</font></li>
+            <li><font face="Arial" size="4"><strong>&lt;strong&gt;Submit&lt;/strong&gt;:</strong> We can now put other HTML tags, like &lt;strong&gt; or even an &lt;img&gt;, right inside our button!</font></li>
+        </ul>
+        
+        <p><font face="Arial" size="4">
+            <strong>Result:</strong> A more flexible and powerful button that has the exact same submit functionality. From now on, we'll prefer &lt;button type="submit"&gt;.
+        </font></p>
+        
+       
+        
+        <h2><font face="Verdana">The Need for Long-Form Text - &lt;textarea&gt;</font></h2>
+        <p><font face="Arial" size="4">
+            <strong>The Problem:</strong> Our &lt;input type="text"&gt; is great for single lines of text like a name, but it's terrible for longer input, like a user comment or a shipping address. The text just scrolls sideways and becomes unreadable.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong> We need a dedicated element for multi-line text input. This is the <strong>&lt;textarea&gt;</strong> tag.
+        </font></p>
+        <p><font face="Arial" size="4">
+            Unlike &lt;input&gt;, &lt;textarea&gt; is a container tag (it has an opening and closing tag). It's also linked to a &lt;label&gt; using the same for and id pattern.
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            Let's add a comments box:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;label for="comments"&gt;Any special instructions?&lt;/label&gt;
+&lt;br&gt;
+&lt;textarea id="comments" name="comments" rows="4" cols="50"&gt;&lt;/textarea&gt;
+&lt;br&gt;&lt;br&gt;
+        </font></pre>
+        
+        <ul>
+            <li><font face="Arial" size="4"><strong>rows="4":</strong> This attribute controls the visible height of the text area, suggesting it should be about 4 lines of text tall.</font></li>
+            <li><font face="Arial" size="4"><strong>cols="50":</strong> This controls the visible width, suggesting it should be about 50 characters wide.</font></li>
+        </ul>
+        
+       
+        
+        <h2><font face="Verdana">The Need for Many Options - The Dropdown (&lt;select&gt;)</font></h2>
+        <p><font face="Arial" size="4">
+            <strong>The Problem:</strong> Radio buttons are good for 3-4 options, but what if you need the user to select one option from a very long list, like their country? A list of 200 radio buttons would make the page incredibly long and difficult to use.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong> A dropdown menu. It compactly hides all the options until the user clicks on it. This is created with the <strong>&lt;select&gt;</strong> tag, which contains multiple <strong>&lt;option&gt;</strong> tags.
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            Let's build a country selector:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;label for="country"&gt;Country:&lt;/label&gt;
+&lt;br&gt;
+&lt;select id="country" name="country"&gt;
+    &lt;option value=""&gt;--Please choose an option--&lt;/option&gt;
+    &lt;option value="in"&gt;India&lt;/option&gt;
+    &lt;option value="us"&gt;USA&lt;/option&gt;
+    &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+    &lt;option value="au"&gt;Australia&lt;/option&gt;
+&lt;/select&gt;
+&lt;br&gt;&lt;br&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            <strong>Breakdown:</strong>
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4"><strong>&lt;select&gt;:</strong> This is the main container for the dropdown. The id and name attributes go on this tag.</font></li>
+            <li><font face="Arial" size="4"><strong>&lt;option&gt;:</strong> Each individual choice in the dropdown is an &lt;option&gt; tag.</font></li>
+            <li><font face="Arial" size="4"><strong>value Attribute on &lt;option&gt;:</strong> This is the data that gets sent to the server. The text between the tags (India) is what the user sees.</font></li>
+        </ul>
+        
+       
+        
+        <h2><font face="Verdana">More Specialized Inputs (HTML5 Power-ups)</font></h2>
+        <p><font face="Arial" size="4">
+            HTML5 introduced many new type attributes for &lt;input&gt; to make forms smarter and more user-friendly.
+        </font></p>
+        
+        <h3><font face="Verdana">type="password"</font></h3>
+        <p><font face="Arial" size="4">
+            <strong>The Problem:</strong> We need a text field for sensitive information that shouldn't be visible on the screen as the user types.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong> &lt;input type="password"&gt;. It masks the input with dots or asterisks.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;label for="userPass"&gt;Password:&lt;/label&gt;
+&lt;br&gt;
+&lt;input type="password" id="userPass" name="userPassword"&gt;
+&lt;br&gt;&lt;br&gt;
+        </font></pre>
+        
+        <h3><font face="Verdana">type="number" with min and max</font></h3>
+        <p><font face="Arial" size="4">
+            <strong>The Problem:</strong> We want the user to enter a number, like their age, but we want to restrict the input to a valid range. We also want mobile browsers to show a number keypad.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong> &lt;input type="number"&gt; with min and max attributes for validation.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;label for="userAge"&gt;Age (18-99):&lt;/label&gt;
+&lt;br&gt;
+&lt;input type="number" id="userAge" name="age" min="18" max="99"&gt;
+&lt;br&gt;&lt;br&gt;
+        </font></pre>
+        
+        <p><font face="Arial" size="4">
+            <strong>Result:</strong> This creates a number field, often with small up/down arrows. The browser will prevent the form from submitting if the user enters a number outside the 18-99 range.
+        </font></p>
+        
+        <h3><font face="Verdana">type="date"</font></h3>
+        <p><font face="Arial" size="4">
+            <strong>The Problem:</strong> Asking users to type a date in a specific format (e.g., MM/DD/YYYY) is prone to errors.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <strong>The Solution:</strong> &lt;input type="date"&gt;. Most browsers will display a user-friendly calendar date picker.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;label for="birthDate"&gt;Date of Birth:&lt;/label&gt;
+&lt;br&gt;
+&lt;input type="date" id="birthDate" name="dob"&gt;
+&lt;br&gt;&lt;br&gt;
+        </font></pre>
+        
+        <h3><font face="Verdana">Other Useful Types for Homework</font></h3>
+        <ul>
+            <li><font face="Arial" size="4"><strong>type="color":</strong> Displays a color picker.</font></li>
+            <li><font face="Arial" size="4"><strong>type="range":</strong> Creates a slider control.</font></li>
+            <li><font face="Arial" size="4"><strong>type="file":</strong> Allows the user to upload a file from their device.</font></li>
+            <li><font face="Arial" size="4"><strong>required:</strong> Makes a field mandatory to fill out before submission.</font></li>
+            <li><font face="Arial" size="4"><strong>placeholder:</strong> Shows hint text inside the input field that disappears when the user starts typing.</font></li>
+        </ul>
+        
+       
+    </main>
+</div>
+<hr>
+    <footer>
+        <table width="100%">
+            <tr>
+                <td align="center">
+                    <p><font face="Arial" size="2">HTML Notes &copy; 2025</font></p>
+                    <p><font face="Arial" size="2">All rights reserved | Created By Anusha Sajjan</font></p>
+                </td>
+            </tr>
+        </table>
+    </footer>
+
+</body>
+</html>

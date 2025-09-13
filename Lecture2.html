@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Notes</title>
+</head>
+<body>
+
+    <!-- Header Section with Logo -->
+    <header>
+        <table width="100%">
+            <tr>
+                <td width="80" valign="top">
+                    <img src="files.png" alt="Logo" width="150" height="150">
+                </td>
+                <td>
+                    <h1><font face="Georgia" size="6">Hyper Text Markup Language</font></h1>
+                    <p><font face="Arial">Comprehensive notes on HTML</font></p>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <hr>
+
+    <main>
+        <div height="100%" width="50%">
+            <h1><font face="Georgia" size="6">HTML : Hyper Text Markup Language</font></h1>
+        
+        <p><font face="Arial" size="4">
+            HTML stands for <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage. It is the standard language used to create and structure the content of a webpage.
+        </font></p>
+        
+        <ul>
+            <li><font face="Arial" size="4"><strong>HyperText:</strong> This refers to the ability to create links that connect web pages to one another, making the web a connected "web" of information.</font></li>
+            <li><font face="Arial" size="4"><strong>Markup Language:</strong> This means you use "tags" to surround your content, giving that content meaning and structure. You are "marking up" a plain text document.</font></li>
+        </ul>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Logo" height="100">
+        </center>
+        
+        <h2><font face="Verdana">First Website</font></h2>
+        <p><font face="Arial" size="4">
+            The first website ever created is still online! You can visit it at:
+        </font></p>
+        <p><font face="Arial" size="4">
+            <a href="https://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">https://info.cern.ch/hypertext/WWW/TheProject.html</a>
+        </font></p>
+        
+        <h2><font face="Verdana">Install Required Software</font></h2>
+        
+        <h3><font face="Verdana">1. Install Visual Studio Code</font></h3>
+        <p><font face="Arial" size="4">
+            This is a free piece of software from Microsoft that you will use to write your code.
+        </font></p>
+        <p><font face="Arial" size="4">
+            <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>
+        </font></p>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/906/906324.png" alt="VS Code Logo" height="100">
+        </center>
+        
+        <h3><font face="Verdana">2. Install Visual Studio Code Extensions</font></h3>
+        <p><font face="Arial" size="4">
+            Enhance your coding experience with these useful extensions:
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4"><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server" target="_blank">Live Preview</a> - See your changes in real-time</font></li>
+            <li><font face="Arial" size="4"><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank">Prettier</a> - Code formatter for consistent style</font></li>
+        </ul>
+        
+        <h2><font face="Verdana">HTML Elements</font></h2>
+        
+        <h3><font face="Verdana">1. The Heading (&lt;h1&gt; to &lt;h6&gt;)</font></h3>
+        <p><font face="Arial" size="4">
+            Headings are tags used to define titles and subtitles on your page. They are crucial for creating a logical hierarchy and outline for your content.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+        </font></pre>
+        
+        <ul>
+            <li><font face="Arial" size="4">&lt;h1&gt;: The most important heading, typically used only once per page for the main title.</font></li>
+            <li><font face="Arial" size="4">&lt;h2&gt;: A major section heading.</font></li>
+            <li><font face="Arial" size="4">&lt;h3&gt;: A sub-section heading under an &lt;h2&gt;.</font></li>
+            <li><font face="Arial" size="4">...and so on, down to &lt;h6&gt;, the least important heading.</font></li>
+        </ul>
+        
+        <p><font face="Arial" size="4">
+            <strong>The Purpose:</strong> To structure your document in a way that is understandable to both humans and machines (like search engines and screen readers). It is <strong>not</strong> just for making text big; it is for giving the text structural importance.
+        </font></p>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/709/709510.png" alt="Headings" height="100">
+        </center>
+        
+        <h3><font face="Verdana">2. The Paragraph (&lt;p&gt;)</font></h3>
+        <p><font face="Arial" size="4">
+            The paragraph tag is the most common tag you'll use. It's for grouping sentences and blocks of text together.
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            <strong>The Purpose:</strong> To define a distinct paragraph of text. Browsers automatically add a little bit of space before and after a &lt;p&gt; element, separating it from other content. You should not use multiple line breaks; you should use multiple &lt;p&gt; tags.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;p&gt;This is the first paragraph. It contains several sentences about a topic.&lt;/p&gt;
+&lt;p&gt;This is a second, separate paragraph. The browser will display it with a space between it and the first one.&lt;/p&gt;
+        </font></pre>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Paragraph" height="100">
+        </center>
+        
+        <h3><font face="Verdana">3. HTML Horizontal Rules (&lt;hr&gt;)</font></h3>
+        <p><font face="Arial" size="4">
+            The &lt;hr&gt; tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.
+        </font></p>
+        <p><font face="Arial" size="4">
+            The &lt;hr&gt; element is used to separate content (or define a change) in an HTML page:
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;p&gt;This is the first topic.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;This is a completely different topic.&lt;/p&gt;
+        </font></pre>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/992/992700.png" alt="Horizontal Rule" height="100">
+        </center>
+        
+        <h3><font face="Verdana">4. The Line Break Tag: &lt;br&gt;</font></h3>
+        <p><font face="Arial" size="4">
+            This tag tells the browser, "Stop writing on this line and immediately start on the next one." It's like hitting the Enter key once in a poem or an address.
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            <strong>Purpose:</strong> Creates a single line break.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;p&gt;221B Baker Street&lt;br&gt;
+London, England&lt;/p&gt;
+        </font></pre>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/709/709533.png" alt="Line Break"  height="100">
+        </center>
+        
+        <h3><font face="Verdana">5. List Elements (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</font></h3>
+        <p><font face="Arial" size="4">
+            These tags are used to create lists. This is a perfect example of nesting.
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            <strong>The Tags:</strong>
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4">&lt;ul&gt;: An <strong>U</strong>nordered <strong>L</strong>ist. It creates a bulleted list.</font></li>
+            <li><font face="Arial" size="4">&lt;ol&gt;: An <strong>O</strong>rdered <strong>L</strong>ist. It creates a numbered list.</font></li>
+            <li><font face="Arial" size="4">&lt;li&gt;: A <strong>L</strong>ist <strong>I</strong>tem. Each item in either type of list must be wrapped in an &lt;li&gt; tag.</font></li>
+        </ul>
+        
+        <p><font face="Arial" size="4">
+            <strong>The Purpose:</strong> To group related items together in a list format.
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            Example (Nesting in action): The &lt;li&gt; elements are nested as children inside the &lt;ul&gt; parent.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;ul&gt;
+  &lt;li&gt;Tea Bag&lt;/li&gt;
+  &lt;li&gt;Water&lt;/li&gt;
+  &lt;li&gt;Sugar&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First, boil the water in a kettle.&lt;/li&gt;
+  &lt;li&gt;Add tea bag, sugar and milk into it&lt;/li&gt;
+  &lt;li&gt;Keep boiling it for 5 minutes &lt;/li&gt;
+  &lt;li&gt;Serve the tea by pouring it into cup&lt;/li&gt;
+&lt;/ol&gt;
+        </font></pre>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/709/709512.png" alt="Lists"  height="100">
+        </center>
+        
+        <h3><font face="Verdana">6. The Anchor Tag (&lt;a&gt;)</font></h3>
+        <p><font face="Arial" size="4">
+            The Anchor tag is what makes the web "hypertext." It is used to create a hyperlink to another webpage, a file, or a location within the same page.
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            <strong>The Purpose:</strong> To make text (or an image) clickable, allowing users to navigate. It requires an <strong>attribute</strong> called href (hypertext reference) to specify the destination URL.
+        </font></p>
+        
+        <pre><font face="Courier New" size="4">
+&lt;a href="https://www.coderarmy.in/"&gt;Visit Coder Army&lt;/a&gt;
+        </font></pre>
+        
+        <h4><font face="Verdana">HTML Links - The target Attribute</font></h4>
+        <p><font face="Arial" size="4">
+            By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.
+        </font></p>
+        <p><font face="Arial" size="4">
+            The target attribute specifies where to open the linked document.
+        </font></p>
+        <p><font face="Arial" size="4">
+            The target attribute can have one of the following values:
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4">_self - Default. Opens the document in the same window/tab as it was clicked</font></li>
+            <li><font face="Arial" size="4">_blank - Opens the document in a new window or tab</font></li>
+        </ul>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/709/709515.png" alt="Anchor Tag" height="100">
+        </center>
+        
+        <h3><font face="Verdana">7. The Image Tag (&lt;img&gt;)</font></h3>
+        <p><font face="Arial" size="4">
+            The Image tag is a <strong>self-closing tag</strong> used to embed an image onto your page.
+        </font></p>
+        
+        <p><font face="Arial" size="4">
+            <strong>The Purpose:</strong> To display a visual image. It requires two main attributes:
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4">src (source): The path or URL to the image file. This is mandatory.</font></li>
+            <li><font face="Arial" size="4">alt (alternative text): A description of the image. This is vital for accessibility (screen readers for the visually impaired will read this out) and for when the image fails to load.</font></li>
+        </ul>
+        
+        <pre><font face="Courier New" size="4">
+&lt;<img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" height="300px" width="300px" alt="This is Dog Photo"&gt;/>
+        </font></pre>
+        </div>
+        
+       
+    </main>
+
+    <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <table width="100%">
+            <tr>
+                <td align="center">
+                    <p><font face="Arial" size="2">HTML Notes &copy; 2025</font></p>
+                    <p><font face="Arial" size="2">All rights reserved | Created By Anusha Sajjan</font></p>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

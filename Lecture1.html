@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 1</title>
+</head>
+<body>
+    <!-- Header Section with Logo -->
+    <header>
+        <table width="100%">
+            <tr>
+                <td width="80" valign="top">
+                    <img src="files.png" alt="Logo" width="150" height="150">
+                </td>
+                <td>
+                    <h1><font face="Georgia" size="6">Hyper Text Markup Language</font></h1>
+                    <p><font face="Arial">Comprehensive notes on HTML</font></p>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    
+    <hr>
+ <main>
+        <h1><font face="Georgia" size="6">HOW Does Internet Work</font></h1>
+        
+        <h2><font face="Verdana">Principle 1: The Need to Share Information</font></h2>
+        <p><font face="Arial" size="4">
+            The most fundamental truth is that we have information on one computer (Computer A) and we want it to be on another computer (Computer B). These computers are not in the same room.
+        </font></p>
+        <p><font face="Arial" size="4">
+            How do we solve this? The simplest, most primitive way is to physically carry the information (e.g., on a USB stick). This works, but it's slow and doesn't scale. We need a direct, electronic connection.
+        </font></p>
+        <p><font face="Arial" size="4">
+            So, we run a cable (like an ethernet cable or a fiber optic line) between Computer A and Computer B. We can now send electrical signals or pulses of light down this cable. We can agree on a simple code: a high-voltage signal means "1," and a low-voltage signal means "0."
+        </font></p>
+        <p><font face="Arial" size="4">
+            We have just created the most basic form of a network: a <strong>direct link</strong>. We can now send bits (1s and 0s) between two computers.
+        </font></p>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Direct Connection" width="150" height="150">
+        </center>
+        
+        <h2><font face="Verdana">Principle 2: The Problem of Scale</font></h2>
+        <p><font face="Arial" size="4">
+            This works for two computers. But what if we have three computers (A, B, and C) and they all need to talk to each other? We would need a cable from A to B, from B to C, and from A to C. For four computers, we'd need six cables. For 100 computers, we'd need 4,950 cables.
+        </font></p>
+        <p><font face="Arial" size="4">
+            This is a failure of scale. Connecting every machine to every other machine directly is physically impossible.
+        </font></p>
+        <p><font face="Arial" size="4">
+            The logical solution is to have a central device. Every computer connects to this one central point (let's call it a <strong>Switch</strong>). When Computer A wants to talk to Computer C, it sends the message to the switch, and the switch forwards it only to Computer C.
+        </font></p>
+        <p><font face="Arial" size="4">
+            We have just invented a <strong>Local Network</strong>. A group of computers in close proximity (like an office or a home) can now communicate efficiently.
+        </font></p>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208720.png" alt="Network Switch" width="150" height="150">
+        </center>
+        
+        <h2><font face="Verdana">Principle 3: The Problem of Connecting Networks</font></h2>
+        <p><font face="Arial" size="4">
+            Now, our office has a local network. Another office across town also has its own local network. How does a computer on our network talk to a computer on their network?
+        </font></p>
+        <p><font face="Arial" size="4">
+            We face the same scaling problem. We can't run a wire from every computer in our office to every computer in theirs.
+        </font></p>
+        <p><font face="Arial" size="4">
+            The logical solution is to connect the <em>networks themselves</em>. We need a special, dedicated computer that is connected to <em>our</em> network and also connected to <em>their</em> network. Its only job is to pass messages, or "route" traffic, from one network to the other. Let's call this device a <strong>Router</strong>.
+        </font></p>
+        <p><font face="Arial" size="4">
+            Now, if we want to connect to a third network, we just connect our router to their router. Suddenly, we can build a massive, sprawling web by connecting networks to other networks.
+        </font></p>
+        <p><font face="Arial" size="4">
+            This is the fundamental truth of the Internet. The <strong>Internet is a "network of networks."</strong> It is not one giant cloud; it is millions of private and public local networks all connected by these special routing devices.
+        </font></p>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/284/284666.png" alt="Router" width="150" height="150">
+        </center>
+        
+        <h2><font face="Verdana">Principle 4: The Problem of Finding Anyone (Addressing)</font></h2>
+        <p><font face="Arial" size="4">
+            We have built a global web of interconnected networks. If I'm on my computer in my office, how do I send a message to a specific server in another country? There are millions of computers. I need a unique address for every single device.
+        </font></p>
+        <p><font face="Arial" size="4">
+            This gives rise to the need for a universal addressing system. Just like the postal service needs a unique street address for every house in the world, our network of networks needs a unique address for every connected device.
+        </font></p>
+        <p><font face="Arial" size="4">
+            This is the reason the <strong>IP Address (Internet Protocol Address)</strong> exists. It's a unique label (e.g., 142.250.184.142) assigned to each device. When a router sees a message, it looks at the destination IP address and says, "Based on this address, I don't need to send it to the network on my left; I need to send it to the network on my right to get it one step closer to its final destination." Routers don't know the full path; they just know the next best "hop" to send the message on.
+        </font></p>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/3384/3384572.png" alt="IP Address" width="150" height="150">
+        </center>
+        
+        <h2><font face="Verdana">Principle 5: The Problem of Reliability and Fairness</font></h2>
+        <p><font face="Arial" size="4">
+            If I want to send a large file, like a 1-hour video, it is a huge stream of data. If I try to send it all at once:
+        </font></p>
+        <ol>
+            <li><font face="Arial" size="4">I would completely monopolize the connection, and no one else could send anything until my video was done.</font></li>
+            <li><font face="Arial" size="4">If even a single bit of information gets corrupted during the transfer, the entire file is ruined, and I have to start over from the beginning.</font></li>
+        </ol>
+        <p><font face="Arial" size="4">
+            This is inefficient and unreliable. The logical solution is to break the large file into many thousands of small, numbered pieces. Let's call them <strong>Packets</strong>.
+        </font></p>
+        <p><font face="Arial" size="4">
+            Each packet is like a tiny envelope. It contains:
+        </font></p>
+        <ul>
+            <li><font face="Arial" size="4">A small piece of the data (a "payload").</font></li>
+            <li><font face="Arial" size="4">The destination IP address (where it's going).</font></li>
+            <li><font face="Arial" size="4">The sender's IP address (so they can reply).</font></li>
+            <li><font face="Arial" size="4">A number, so the receiving computer knows how to reassemble them in the correct order ("Packet 1 of 5,000," "Packet 2 of 5,000," etc.).</font></li>
+        </ul>
+        <p><font face="Arial" size="4">
+            These packets can travel independently across the internet, sometimes even taking different routes. The receiving computer gathers all the packets, checks if any are missing (and requests them again if they are), and reassembles them in the correct order to recreate the original file.
+        </font></p>
+        <p><font face="Arial" size="4">
+            This system of rules for addressing, breaking down, sending, and reassembling data is called a <strong>Protocol</strong>. The main one used on the internet is <strong>TCP/IP (Transmission Control Protocol / Internet Protocol)</strong>.
+        </font></p>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/2484/2484876.png" alt="Data Packets" width="150" height="150">
+        </center>
+        
+        <h2><font face="Verdana">Summary from First Principles</font></h2>
+        <p><font face="Arial" size="4">
+            So, the internet isn't magic. It's a series of logical solutions to a series of fundamental problems:
+        </font></p>
+        <ol>
+            <li><font face="Arial" size="4"><strong>Problem:</strong> Share data between two computers. <strong>Solution:</strong> A <strong>direct physical link</strong>.</font></li>
+            <li><font face="Arial" size="4"><strong>Problem:</strong> Connect many computers efficiently. <strong>Solution:</strong> A <strong>local network</strong> with a central switch.</font></li>
+            <li><font face="Arial" size="4"><strong>Problem:</strong> Connect many networks efficiently. <strong>Solution:</strong> An <strong>internetwork</strong> connected by <strong>routers</strong>.</font></li>
+            <li><font face="Arial" size="4"><strong>Problem:</strong> Find a specific computer in this massive web. <strong>Solution:</strong> A universal <strong>IP Address</strong> for every device.</font></li>
+            <li><font face="Arial" size="4"><strong>Problem:</strong> Send data reliably and fairly without errors. <strong>Solution:</strong> A set of rules (<strong>TCP/IP</strong>) to break data into small, addressed <strong>packets</strong> that can be reassembled.</font></li>
+        </ol>
+        
+        <center>
+            <img src="https://cdn-icons-png.flaticon.com/512/1906/1906367.png" alt="Internet Principles" width="150" height="150">
+        </center>
+
+        
+      
+    </main>
+    <hr>
+    <!-- Footer Section -->
+    <footer>
+        <table width="100%">
+            <tr>
+                <td align="center">
+                    <p><font face="Arial" size="2">HTML Notes &copy; 2025</font></p>
+                    <p><font face="Arial" size="2">All rights reserved | Created By Anusha Sajjan</font></p>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>
